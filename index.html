@@ -1981,9 +1981,35 @@
       text-wrap: balance;
     }
 
+    .social-case {
+      margin: clamp(2rem, 5vw, 4.5rem) 0 0;
+      border: 1px solid rgba(23, 63, 70, .34);
+      background: var(--creme);
+    }
+
+    .social-case img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .social-case figcaption {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+      color: var(--petroleo);
+    }
+
+    .social-case h4 { margin: 0; font-size: 1rem; }
+    .social-case span { font-size: .78rem; opacity: .62; }
+
     @media (max-width: 720px) {
       .social-concept { grid-template-columns: 1fr; gap: 1.5rem; }
       .social-concept p { font-size: clamp(2.25rem, 11vw, 4rem); }
+      .social-case figcaption { align-items: flex-start; flex-direction: column; gap: .3rem; }
     }
 
     .hero.hero--manifesto {
@@ -2391,6 +2417,11 @@
         <div class="social-concept reveal">
           <p>Transformamos estratégia e conteúdo em posicionamento, relacionamento e <strong>oportunidades reais de venda</strong> para a sua marca.</p>
         </div>
+
+        <figure class="social-case reveal">
+          <img src="assets/redes-sociais-rsilvado.jpg" alt="Case de redes sociais para R. Silvado, com conteúdos e campanhas em Instagram" loading="lazy">
+          <figcaption><h4>R. Silvado</h4><span>Conteúdo e presença digital para redes sociais.</span></figcaption>
+        </figure>
       </section>
     </section>
 

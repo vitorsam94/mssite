@@ -2083,8 +2083,11 @@
     }
 
     @media (max-width: 720px) {
-      .hero.hero--manifesto { min-height: auto; padding-top: 7.5rem; padding-bottom: 4.5rem; }
-      .hero.hero--manifesto h1.manifesto__statement { font-size: clamp(3.25rem, 15vw, 5rem); }
+      .hero.hero--manifesto {
+        min-height: auto;
+        padding: 7.5rem max(1.25rem, 5vw) 4.5rem;
+      }
+      .hero.hero--manifesto h1.manifesto__statement { font-size: clamp(2.9rem, 13vw, 4.75rem); }
       .hero__manifesto-grid .manifesto__side { padding-top: 1.5rem; }
       .hero__manifesto-grid .manifesto__side p { font-size: 1rem; }
     }
@@ -2172,7 +2175,7 @@
   <main id="conteudo">
     <section class="hero hero--manifesto" id="inicio">
       <div class="manifesto hero__manifesto-grid">
-        <h1 class="manifesto__statement">Criatividade é importante. <span>Resolver é essencial.</span></h1>
+        <h1 class="manifesto__statement">Criatividade&nbsp;é importante. <span>Resolver é essencial.</span></h1>
         <div class="manifesto__side">
           <p>Somos uma produtora que transforma ideias em entregas consistentes — conectando criação, produção e técnica no mesmo fluxo.</p>
           <p>Entramos para organizar o caos, somar repertório e fazer acontecer.</p>

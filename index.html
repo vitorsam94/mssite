@@ -674,6 +674,28 @@
       transform: translateY(-1px);
     }
 
+    /* Ordem editorial do portfólio */
+    #portfolio { display: flex; flex-direction: column; }
+    #portfolio > .portfolio-intro { order: 1; }
+    #portfolio > .portfolio-nav { order: 2; }
+    #audiovisual { order: 3; }
+    #eventos { order: 4; }
+    #social { order: 5; }
+    #espacos { order: 6; }
+
+    .event-card__info { display: block; }
+    .event-card__info > span {
+      display: block;
+      margin-bottom: .45rem;
+      color: var(--coral);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      opacity: 1;
+    }
+    .event-card__info h4 { margin-bottom: .45rem; }
+    .event-card__info p { margin: 0; max-width: 36rem; font-size: .82rem; line-height: 1.45; opacity: .68; }
+
     .portfolio-block {
       padding: clamp(5rem, 9vw, 9rem) var(--pad);
       border-bottom: 1px solid var(--line);
@@ -2208,10 +2230,10 @@
       </div>
 
       <nav class="portfolio-nav" aria-label="Frentes do portfólio">
-        <a href="#audiovisual">01 Audiovisual</a>
-        <a href="#espacos">02 Espaços</a>
-        <a href="#eventos">03 Eventos</a>
-        <a href="#social">04 Social Media</a>
+        <a href="#audiovisual">01 Produção Audiovisual</a>
+        <a href="#eventos">02 Eventos</a>
+        <a href="#social">03 Social Media</a>
+        <a href="#espacos">04 Projetos</a>
       </nav>
 
       <section class="portfolio-block" id="audiovisual" aria-labelledby="audiovisual-title">
@@ -2274,7 +2296,7 @@
 
       <section class="portfolio-block section--petroleo" id="espacos" aria-labelledby="espacos-title">
         <header class="block-head reveal">
-          <div><span class="block-index">02 / 04</span><h3 id="espacos-title">projetos de espaços</h3></div>
+          <div><span class="block-index">04 / 04</span><h3 id="espacos-title">projetos de espaços</h3></div>
           <p>Ambientes em construção. Os cards ficam preparados para receber escopo, imagens, ficha técnica e resultados de cada projeto.</p>
         </header>
 
@@ -2296,57 +2318,57 @@
 
       <section class="portfolio-block" id="eventos" aria-labelledby="eventos-title">
         <header class="block-head reveal">
-          <div><span class="block-index">03 / 04</span><h3 id="eventos-title">eventos</h3></div>
+          <div><span class="block-index">02 / 04</span><h3 id="eventos-title">eventos</h3></div>
           <p>Produção e direção técnica conectando palco, equipe, luz, som, vídeo e público em uma mesma experiência.</p>
         </header>
 
-        <div class="event-project-list" id="eventos-list" aria-label="Projetos de eventos em ordem cronológica">
-          <article class="event-project reveal">
-            <button class="event-project__media open-video" type="button" data-video="-ukQRlljLk8" data-title="Concerto Vem Viajar — Coro e Orquestra EDUCA" aria-label="Assistir Concerto Vem Viajar — Coro e Orquestra EDUCA">
+        <div class="video-grid" id="eventos-list" aria-label="Projetos de eventos em ordem cronológica">
+          <article class="video-card reveal">
+            <button class="video-card__media open-video" type="button" data-video="-ukQRlljLk8" data-title="Concerto Vem Viajar — Coro e Orquestra EDUCA" aria-label="Assistir Concerto Vem Viajar — Coro e Orquestra EDUCA">
               <img src="https://i.ytimg.com/vi/-ukQRlljLk8/hqdefault.jpg" alt="Concerto Vem Viajar — Coro e Orquestra EDUCA" loading="lazy">
-              <span class="event-watch">Assistir <b aria-hidden="true">↗</b></span>
+              <span class="video-number">01</span><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
-            <div class="event-project__copy"><span>Concerto · Produção completa</span><h4>Concerto Vem Viajar</h4><p>Produção executiva, direção técnica, som, luz, painel de LED e registro audiovisual</p></div>
+            <div class="video-card__info event-card__info"><span>Concerto · Produção completa</span><h4>Concerto Vem Viajar</h4><p>Produção executiva, direção técnica, som, luz, painel de LED e registro audiovisual.</p></div>
           </article>
 
-          <article class="event-project reveal">
-            <button class="event-project__media open-video" type="button" data-video="gtX3IBk0Ev8" data-start="1346" data-title="Musical Ecos de Amor" aria-label="Assistir Musical Ecos de Amor">
+          <article class="video-card reveal">
+            <button class="video-card__media open-video" type="button" data-video="gtX3IBk0Ev8" data-start="1346" data-title="Musical Ecos de Amor" aria-label="Assistir Musical Ecos de Amor">
               <img src="https://i.ytimg.com/vi/gtX3IBk0Ev8/hqdefault.jpg" alt="Musical Ecos de Amor" loading="lazy">
-              <span class="event-watch">Assistir <b aria-hidden="true">↗</b></span>
+              <span class="video-number">02</span><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
-            <div class="event-project__copy"><span>Musical</span><h4>Ecos de Amor</h4><p>Direção de produção</p></div>
+            <div class="video-card__info event-card__info"><span>Musical</span><h4>Ecos de Amor</h4><p>Direção de produção.</p></div>
           </article>
 
-          <article class="event-project reveal">
-            <button class="event-project__media open-video" type="button" data-video="SSzsvqrEFPA" data-title="Bienal de Arte Cristã — IBB" aria-label="Assistir Bienal de Arte Cristã — IBB">
+          <article class="video-card reveal">
+            <button class="video-card__media open-video" type="button" data-video="SSzsvqrEFPA" data-title="Bienal de Arte Cristã — IBB" aria-label="Assistir Bienal de Arte Cristã — IBB">
               <img src="https://i.ytimg.com/vi/SSzsvqrEFPA/hqdefault.jpg" alt="Bienal de Arte Cristã — IBB" loading="lazy">
-              <span class="event-watch">Assistir <b aria-hidden="true">↗</b></span>
+              <span class="video-number">03</span><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
-            <div class="event-project__copy"><span>Bienal · IBB</span><h4>Bienal de Arte Cristã</h4><p>Direção de produção</p></div>
+            <div class="video-card__info event-card__info"><span>Bienal · IBB</span><h4>Bienal de Arte Cristã</h4><p>Direção de produção.</p></div>
           </article>
 
-          <article class="event-project reveal collapsible-extra" hidden>
-            <button class="event-project__media open-video" type="button" data-video="mBGxyhP-07Y" data-start="1" data-title="Não mais as mesmas — Teatro Positivo" aria-label="Assistir Não mais as mesmas — Teatro Positivo">
+          <article class="video-card reveal collapsible-extra" hidden>
+            <button class="video-card__media open-video" type="button" data-video="mBGxyhP-07Y" data-start="1" data-title="Não mais as mesmas — Teatro Positivo" aria-label="Assistir Não mais as mesmas — Teatro Positivo">
               <img src="https://i.ytimg.com/vi/mBGxyhP-07Y/hqdefault.jpg" alt="Não mais as mesmas — Teatro Positivo" loading="lazy">
-              <span class="event-watch">Assistir <b aria-hidden="true">↗</b></span>
+              <span class="video-number">04</span><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
-            <div class="event-project__copy"><span>Musical · Teatro Positivo</span><h4>Não mais as mesmas</h4><p>Produção executiva · Direção técnica</p></div>
+            <div class="video-card__info event-card__info"><span>Musical · Teatro Positivo</span><h4>Não mais as mesmas</h4><p>Produção executiva e direção técnica.</p></div>
           </article>
 
-          <article class="event-project reveal collapsible-extra" hidden>
-            <button class="event-project__media open-video" type="button" data-video="aDuzd06fpuM" data-title="Musical O baú de memórias" aria-label="Assistir Musical O baú de memórias">
+          <article class="video-card reveal collapsible-extra" hidden>
+            <button class="video-card__media open-video" type="button" data-video="aDuzd06fpuM" data-title="Musical O baú de memórias" aria-label="Assistir Musical O baú de memórias">
               <img src="https://i.ytimg.com/vi/aDuzd06fpuM/hqdefault.jpg" alt="Musical O baú de memórias" loading="lazy">
-              <span class="event-watch">Assistir <b aria-hidden="true">↗</b></span>
+              <span class="video-number">05</span><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
-            <div class="event-project__copy"><span>Musical</span><h4>O baú de memórias</h4><p>Direção de produção</p></div>
+            <div class="video-card__info event-card__info"><span>Musical</span><h4>O baú de memórias</h4><p>Direção de produção.</p></div>
           </article>
 
-          <article class="event-project reveal collapsible-extra" hidden>
-            <button class="event-project__media open-video" type="button" data-video="F99nWmhBQHQ" data-title="Concerto de Natal — Coro e Orquestra IBB" aria-label="Assistir Concerto de Natal — Coro e Orquestra IBB">
+          <article class="video-card reveal collapsible-extra" hidden>
+            <button class="video-card__media open-video" type="button" data-video="F99nWmhBQHQ" data-title="Concerto de Natal — Coro e Orquestra IBB" aria-label="Assistir Concerto de Natal — Coro e Orquestra IBB">
               <img src="https://i.ytimg.com/vi/F99nWmhBQHQ/hqdefault.jpg" alt="Concerto de Natal — Coro e Orquestra IBB" loading="lazy">
-              <span class="event-watch">Assistir <b aria-hidden="true">↗</b></span>
+              <span class="video-number">06</span><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
-            <div class="event-project__copy"><span>Concerto · Coro e Orquestra IBB</span><h4>Concerto de Natal</h4><p>Direção de produção</p></div>
+            <div class="video-card__info event-card__info"><span>Concerto · Coro e Orquestra IBB</span><h4>Concerto de Natal</h4><p>Direção de produção.</p></div>
           </article>
         </div>
         <button class="collapse-toggle" type="button" data-target="#eventos-list" aria-expanded="false"><span>Ver mais 3 eventos</span><b aria-hidden="true">+</b></button>
@@ -2354,7 +2376,7 @@
 
       <section class="portfolio-block section--verde" id="social" aria-labelledby="social-title">
         <header class="block-head social-head reveal">
-          <div><span class="block-index">04 / 04</span><h3 id="social-title">social media</h3></div>
+          <div><span class="block-index">03 / 04</span><h3 id="social-title">social media</h3></div>
         </header>
 
         <div class="social-concept reveal">
